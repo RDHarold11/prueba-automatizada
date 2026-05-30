@@ -21,9 +21,6 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Instalar dependencias
-        working-directory: src
-        run: pip install pytest
 
   test:
     runs-on: ubuntu-latest
@@ -36,6 +33,10 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: "3.10"
+
+      - name: Instalar dependencias
+        working-directory: src
+        run: pip install pytest
 
       - name: Ejecutar pruebas con pytest
         working-directory: src
