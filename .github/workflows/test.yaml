@@ -23,7 +23,7 @@ jobs:
 
       - name: Instalar dependencias
         working-directory: src
-        run: pip install -r requirements.txt
+        run: pip install pytest
 
   test:
     runs-on: ubuntu-latest
